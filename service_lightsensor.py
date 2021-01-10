@@ -48,9 +48,12 @@ while True:
         elif Luxrounded >= get_var('LUX_LEVEL_3') and Luxrounded < get_var('LUX_LEVEL_4'):
             os.system("crankshaft brightness set " + str(get_var('DISP_BRIGHTNESS_4')) + " &")
             step = 4
+        elif Luxrounded >= get_var('LUX_LEVEL_4') and Luxrounded < get_var('LUX_LEVEL_5'):
+            os.system("crankshaft brightness set " + str(get_var('DISP_BRIGHTNESS_4')) + " &")
+            step = 5
         elif Luxrounded >= get_var('LUX_LEVEL_5'):
             os.system("crankshaft brightness set " + str(get_var('DISP_BRIGHTNESS_5')) + " &")
-            step = 5
+            step = 6
 
         if daynight_gpio == 0:
             if step <= get_var('TSL2561_DAYNIGHT_ON_STEP'):
